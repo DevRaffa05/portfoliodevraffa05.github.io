@@ -1,0 +1,520 @@
+/* BTN NAV = display none */
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+:root {
+    --naranja: #f37a53;
+    --verde: #006847;
+    --blanco: #fff;
+    --negro: #000;
+    --rojo: #CE1126;
+    --moradoOscuro: #202040;
+    --morado: #c146ff;
+    --moradoClaro: #9e57fa;
+    --moradoBg: #4D3E83;
+    --azul: #202060;
+    --rosa: #B030B0;
+    --bgColor: #1C1C1C;
+    --titleFont: 'Fjalla One', sans-serif;
+    --font: 'Space Mono', monospace; 
+}
+
+/* UTILIDADES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*::selection {
+    color: var(--moradoClaro);
+}
+*::-moz-selection {
+    color: var(--moradoClaro);
+}
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+body {
+    font-family: var(--font);
+    color: var(--blanco);
+    background-color: var(--bgColor)!important;
+    height: 100%;
+    width: 100%;
+}
+a {
+    cursor: pointer;
+    color: var(--blanco);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+main {
+    padding-top: 60px;
+}
+body::-webkit-scrollbar {
+    width: 7px;
+    padding-top: 22px;
+    height: 5px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(6, 40, 85);
+    border-radius: 5px;
+}
+.container-home{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-home h1{
+    letter-spacing: 5px;
+ }
+ .container-home h2{
+    display: inline;
+   letter-spacing: 3px;
+}
+/* NAV */
+.nav {
+    margin-top: 2rem;
+}
+.icons {
+    position:static;
+    font-size: 3rem;
+    z-index: 1;
+    margin-left: 2rem;
+}
+.btn-nav {
+    background-color: #2e2e2e;
+    border-radius: 1rem;
+    height: 45vh;
+    position: absolute;
+    top: 10rem;
+    width: 90%;
+    left: 2rem;
+    display: block;
+    position: fixed;
+    z-index: 11;
+}
+.mostrar {
+    display: none;
+}
+.btn-nav > a {
+    padding: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.burger {
+    position: relative;
+    top: 1.5rem;
+    left: 33rem;
+    font-size: 3rem;
+    color: white;
+    width: 20%;
+    position: fixed;
+    z-index: 2;
+}
+.container-home {
+    width: 100%;
+    height: 100%;
+    margin-top: 12rem;
+    margin-bottom: 60rem;
+}
+/* PRESENTATION */
+.container-home h1 {
+    font-size: 2rem;
+}
+.hola, .soy {
+    display: inline;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+}
+.hola {
+    background: linear-gradient(45deg, var(--azul) -30%, var(--rosa) 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.letrasMovimiento {
+    font-size: 1.8rem;
+    text-align: start;
+    margin-left: 3rem;
+    margin-top: -60rem;
+    margin-bottom: 25rem;
+}
+/* ABOUT ME */
+.about-me-title{
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 20px;
+}
+.llavesColor {
+    color: var(--moradoClaro);
+}
+.about-me {
+    margin-top: 200px;
+    width: 100%;
+    padding: 15px;
+}
+.ciudad {
+    color: var(--verde);
+}
+.mexico {
+    color: var(--rojo)
+}
+.letrasColores {
+    font-weight: bold;
+}
+.buttonAboutMe {
+    background-color: var(--moradoClaro);
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    width: 115px;
+}
+.tiktokLink > a {
+    font-weight: bold;
+}
+.tiktokLink > a:hover {
+    color: var(--naranja);
+}
+/* ABOUT ME PERSONAL */
+.about-me-info {
+    width: 100%;
+    margin: 0rem auto;
+    display: grid;
+    padding: 2rem;
+    align-content: center;
+    justify-items: center;
+}
+.about-me-info > p, .about-me-experiencia > p {
+    font-size: 1.43rem;
+}
+.about-me-info > img {
+    margin-top: 2rem;
+    width: 20rem;
+    border-radius: 1.3rem;
+}
+.personalInfo {
+    display: none;
+}
+/* ABOUT ME EXPERIENCE */
+.about-me-experiencia {
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 8.2rem;
+}
+.containerSecond__experience {
+    border-left: 4px solid var(--moradoClaro);
+    margin-right: 1rem;
+    padding-left: 1rem;
+    font-weight: 600;
+}
+#experienceInfo {
+    display: none;
+}
+/* SKILLS */
+.about-me-skills {
+    margin-top: -12rem;
+    margin-bottom: 14rem;
+    display: none;
+    grid-template-columns: repeat(1, 1fr);
+}
+.container-skills {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    padding: 1.5rem 0;
+}
+.container-skills > h2 {
+    padding: 1.5rem 0;
+}
+.container-skills > img {
+    width: 5rem;
+}
+/* PROYECTS */
+.proyects {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 100%;
+    justify-items: center;
+    border: none;
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+    gap: 3rem;
+}
+.proyects-title {
+    padding-top: 7rem;
+}
+.proyectos {
+    width: 100%;
+    height: 100%;
+    padding: .1rem;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+    background-position: center;
+}
+.proyectos > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(60%);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.proyectos:hover {
+    margin-top: -1rem;
+    transition: .5s ease-in-out;
+}
+/* CONTACT ME */
+.contact-me {
+    padding: 0rem 3rem;
+}
+#contact {
+    font-size: 2.8rem;
+    margin-top: 6rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+.input-form{
+    background-color: transparent;
+    border: 1px solid hsla(0, 0%, 100%, .5);
+    border-radius: 1rem;
+    color: var(--blanco);
+    font-size: 1.7rem;
+    height: 4rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    width: 100%;
+}
+.form > textarea {
+    height: 15rem;
+}
+.form > legend {
+    position: absolute;
+    font-weight: 500;
+    margin-top: -1rem;
+    background-color: var(--bgColor);
+    z-index: 10;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.send {
+    padding: 1rem;
+    width: 180px;
+    margin-bottom: 5rem;
+    background-color: var(--moradoClaro);
+    border: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    font-size: 1.8rem;
+}
+/* FOOTER */
+.footer {
+    background-color: var(--negro);
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+@media screen and ( min-width: 1100px) {
+    /* NAV */
+    .iconos-navbar {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    #git, #linkedin, #twitter, a, .btn-nav a{
+        transition: color .3s ease-in-out;
+    }
+    #git:hover{
+        color:  #bd2c00;
+    }
+    #linkedin:hover {
+        color: #0e76a8;
+    }
+    #twitter:hover {
+        color: #00acee;
+    }
+    .nav {
+        backdrop-filter: blur(10px);
+        display: flex;
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        margin-top: 0;
+    }
+    .btn-nav {
+        display: flex;
+        text-align: center;
+        gap: 3rem;
+        margin-left: 75rem;
+        height: 0;
+        top: .5rem;
+        left: 0rem;
+        
+
+
+
+
+
+
+
+
+
+
+
+    }
+    .btn-nav a {
+        display: block;
+        padding: 0.7rem;
+    }
+    .btn-nav a:hover {
+        color: var(--moradoClaro);
+    }
+    .burger {
+        display: none;
+    }
+    /* MAIN */
+    .container-home {
+        padding-top: 90px;
+    }
+    /* PRESENTATION */
+    .container-home h1 {
+        font-size: 6rem;
+    }
+    .hola, .soy {
+        font-size: 5rem;
+    }
+    .letrasMovimiento {
+        font-size: 2.5rem;
+        width: 354px;
+        margin-left: 26rem;
+    }
+    /* ABOUT ME */
+    .about-me {
+        padding: 30px;
+    }
+    .buttonAboutMe {
+        cursor: pointer;
+        width: 410px;
+        font-size: 2.3rem;
+    }
+    .buttonAboutMe:hover, .send:hover {
+        background-color: var(--morado);
+    }
+    .about-me-title{
+        font-size: 4rem;
+        margin: 40px;
+    }
+    .tiktokLink > a:hover {
+        color: var(--naranja);
+    }
+    /* ABOUT ME PERSONAL */
+    .about-me-info {
+        width: 90%;
+        margin: 5rem auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-me-info > p, .about-me-experiencia > p {
+        font-size: 2rem;
+    }
+    .about-me-info > img {
+        width: 30rem;
+        margin-left: 20rem;
+    }
+    /* ABOUT ME EXPERIENCE */
+    .about-me-experiencia {
+        width: 90%;
+        margin: -5rem auto 14rem auto; 
+    }
+    /* SKILLS */
+    .container-skills {
+        border: 1px solid hsla(0, 0%, 100%, .5);
+        border-radius: 5.25rem 0 5.25rem 0rem;
+        margin: 0 auto;
+    }
+    .container-skills > img {
+        width: 10rem;
+    }
+    @keyframes hvr-wobble-skew {
+        16.65% {
+          -webkit-transform: skew(-12deg);
+          transform: skew(-12deg);
+        }
+        33.3% {
+          -webkit-transform: skew(10deg);
+          transform: skew(10deg);
+        }
+        49.95% {
+          -webkit-transform: skew(-6deg);
+          transform: skew(-6deg);
+        }
+        66.6% {
+          -webkit-transform: skew(4deg);
+          transform: skew(4deg);
+        }
+        83.25% {
+          -webkit-transform: skew(-2deg);
+          transform: skew(-2deg);
+        }
+        100% {
+          -webkit-transform: skew(0);
+          transform: skew(0);
+        }
+      }
+    .container-skills:hover, .container-skills:focus, .container-skills:active {
+        -webkit-animation-name: hvr-wobble-skew;
+        animation-name: hvr-wobble-skew;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+      }
+    /* PROYECTS */
+    .proyects {
+        grid-template-columns: repeat(3, 1fr);
+        height: 350px;
+    }
+    .proyectos {
+        padding: 3rem;
+        cursor: pointer;
+    }
+    /* CONTACT ME */
+    .form {
+        margin-left: 30rem;
+    }
+    #contact {
+        font-size: 4rem;
+        padding-top: 10rem;
+    }
+    .input-form{
+        width: 70%;
+        padding: 3rem;
+        margin-bottom: 4rem;
+    }
+    .send {
+        margin-left: 240px;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: background-color .5s ease;
+    }
+    /* FOOTER */
+    .footer {
+        font-size: 1.7rem;
+    }
+}
